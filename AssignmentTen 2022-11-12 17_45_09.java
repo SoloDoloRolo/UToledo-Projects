@@ -62,55 +62,34 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-
 public class AssignmentTen {
-
-	public static void main(String[] args) {
-		
-		Scanner input  = new Scanner(System.in);
-		
-		System.out.print("Enter the first number between 8 and 21: ");
-		
-		int isaiah_number1 = input.nextInt();
-		
-		System.out.print("Enter the second number between 8 and 21: ");
-		
-		int toledo_number2 = input.nextInt();
-		
-		int result = 0;
-
-		
+	public static void main(String[] args) {		
+		Scanner input  = new Scanner(System.in);	
+		System.out.print("Enter the first number between 8 and 21: ");	
+		int isaiah_number1 = input.nextInt();	
+		System.out.print("Enter the second number between 8 and 21: ");	
+		int toledo_number2 = input.nextInt();	
+		int result = 0;	
 		try 
 		{
 			result = toledo_number2/isaiah_number1;
-		}
-		
+		}	
 		catch (Exception e) 
-		{
-			
-			System.out.println("You cannot divide by zero.");
-			
+		{	
+			System.out.println("You cannot divide by zero.");	
 		}
 		
 		System.out.println("Your result is " + result);
-		
 		try
-		{
-			
+		{	
 			File inputFile = new File("/Users/solocup/Desktop/Isaiah.txt");
 			Scanner file = new Scanner(inputFile);
-		
-		
 		while (file.hasNextLine()) 
-		{
-			
-			System.out.println(file.nextLine());
-			
+		{	
+			System.out.println(file.nextLine());	
 		}
 			
-		
 		}
-		
 		catch (FileNotFoundException fnfe) 
 		{
 			System.out.println("Message: " + fnfe.getMessage());
